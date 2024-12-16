@@ -1,0 +1,474 @@
+/* Le profil */
+.profil{
+	padding:5px;
+}
+.profil:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+/* Conlonne de gauche */
+.user{
+	overflow:hidden;
+	float:left;
+	background-color:#32a0d1;
+	border-radius: 10px;
+	width:20%;
+	text-align: center;
+	margin-top:10px;
+	margin-right:1%;
+	font-size:2.5vw;
+	padding-bottom:1.5%;
+}
+.user img{
+	width:90%;
+	height:17vw;
+	border-radius: 10px;
+	margin-top:5%;
+	border:white solid 1px;
+}
+.photoprofil{
+	position:relative;
+	overflow: hidden;
+}
+.photoprofil img{
+	position:none;
+	overflow: hidden;
+}
+.crayon{
+	position: absolute;
+    bottom:3px;
+	right:8px;
+}
+.crayon img{
+	border:none;
+	width:2.5vw;
+	height:2.5vw;
+}
+.icon{
+	font-size: 2vw;
+}
+.icon img{
+	width:1.7vw;
+	height:100%;
+	border:none;
+}
+.user a{
+	font-size:1.5vw;
+}
+/* Colonne du milieu */
+.milieu{
+	width:58%;
+	overflow:hidden;
+}
+/* Affichage des posts */
+.post{
+	background-color:#32a0d1;
+	border-radius: 10px;
+	margin-top:10px;
+	float:left;
+	width:100%;
+}
+.post a{
+	font-size:1.8vw;
+	text-decoration:none;
+	padding:5px;
+	float:left;
+	color:#243065;
+	margin-bottom:1vw;
+}
+.post a.droite{
+	float:right;
+}
+.post .contenu{
+	font-size:2.5vw;
+	background-color:white;
+	text-align:center;
+	padding:1vw;
+}
+.post .titre{
+	margin-top:2vw;
+	margin-bottom:2vw;
+	text-align:center;
+	font-size:2.8vw;
+}
+/* Pour poster */
+.form{
+	background-color:#32a0d1;
+	border-radius: 10px;
+	padding:5px;
+	margin-top:10px;
+}
+.form input[type="text"]{
+	box-sizing: border-box;
+	border-radius: 10px;
+	border:none;
+	width:100%;
+	padding: 10px 20px;
+	margin-bottom:5px;
+	font-size:1.8vw;
+}
+.form textarea{
+	box-sizing: border-box;
+	border-radius: 10px;
+	border:none;
+	height:15vw;
+	width:100%;
+	padding: 10px 20px;
+	margin-bottom:5px;
+	font-size:1.8vw;
+	resize:vertical;
+}
+.form input[type="submit"]{
+	width: 100%;
+    background-color: #243065;
+    color: #d6e6f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	font-size:1.7vw;
+}
+/* Colonne de droite */
+.events{
+	overflow:hidden;
+	float:right;
+	width:20%;
+	margin-left:1%;
+	font-size:2.5vw;
+}
+.events div{
+	background-color:#32a0d1;
+	border-radius: 10px;
+	margin:10px 0;
+	text-align:center;
+	padding: 5px 0;
+}
+.events input[type="submit"]{
+	width:70%;
+	height:3vw;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	font-size:1.5vw;
+	color:white;
+	display:inline-block;
+	padding:5px;
+}
+.events form{
+	height:auto;
+}
+.events input[value="Accepter"]{
+	background-color: green;
+}
+.events input[value="Refuser"]{
+	background-color: red;
+}
+.events a{
+	text-decoration:none;
+}
+/* Quand l'ecran devient petit */
+@media screen and (max-width: 650px) {
+	.user, .milieu, .events{
+		float:none;
+		width:100%;
+	}
+	.user img{
+		height:83vw;
+	}
+	.events{
+		margin-left:0;
+	}
+	.user{
+		font-size:10vw;
+	}
+	.events{
+		font-size:6vw;
+	}
+	.icon{
+		font-size:8vw;
+	}
+	.icon img{
+		width:6vw;
+		height:6vw;
+	}
+	.user a{
+		font-size:5vw;
+	}
+	.crayon img{
+		border:none;
+		width:5vw;
+		height:5vw;
+	}
+	.crayon{
+		position: absolute;
+		bottom:13px;
+		right:35px;
+	}
+	.form{
+		padding:8px;
+	}
+	.form input[type="text"]{
+		padding: 10px 20px;
+		margin-bottom:5px;
+		font-size:4vw;
+	}
+	.form textarea{
+		height:35vw;
+		padding: 10px 20px;
+		margin-bottom:5px;
+		font-size:4vw;
+	}
+	.form input[type="submit"]{
+		padding: 10px 20px;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		font-size:5vw;
+	}
+	.post a{
+		font-size:4vw;
+		padding:5px;
+		float:left;
+		margin-bottom:1.5vw;
+		margin-top:1vw;
+	}
+	.post .contenu{
+		font-size:5vw;
+		padding:2vw;
+	}
+	.post .titre{
+		margin-top:2vw;
+		margin-bottom:2vw;
+		font-size:6vw;
+	}
+	.events input[type="submit"]{
+		width:65%;
+		height:9vw;
+	}
+}
+/* Pour éviter que le texte devient trop grand */
+@media screen and (min-width: 1100px) {
+	.user{
+		font-size:27px;
+		width:215px;
+		padding-bottom:15px;
+	}
+	.user img{
+		height:190px;
+	}
+	.crayon img{
+		height:28px;
+		width:28px;
+	}
+	.events{
+		font-size:27px;
+		width:210px;
+		margin-left:0;
+	}
+	.milieu{		
+		margin:auto;
+	}
+	.icon{
+		font-size:22px;
+	}
+	.icon img{
+		width:18px;
+		height:18px;
+	}
+	.user a{
+		font-size:16px;
+	}
+	.form input[type="text"]{
+		padding: 10px 20px;
+		margin-bottom:5px;
+		font-size:20px;
+	}
+	.form textarea{
+		height:165px;
+		font-size:20px;
+	}
+	.form input[type="submit"]{
+		font-size:19px;
+	}
+	.post a{
+		font-size:20px;
+		padding:5px;
+		margin-bottom:13px;
+		margin-top:1px;
+	}
+	.post .contenu{
+		font-size:27px;
+		padding:12px;
+	}
+	.post .titre{
+		font-size:31px;
+		margin-top:21px;
+		margin-bottom:21px;
+	}
+	.events input[type="submit"]{
+		width:70%;
+		height:33px;
+	}
+}
+
+/* Form pour modifier données de l'utilisateur */
+.modifier{
+	margin: 10px auto ;
+	width:50%;
+	padding: 10px;
+	background-color:#32a0d1;
+	border-radius:8px;
+}
+.modifier input,.modifier select{
+	width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+	background-color:#d6e6f3;
+}
+/* Input checkbox */
+.modifier input[type=checkbox]{
+	padding:none;
+	margin:none;
+	border:none;
+	background-color:none;
+	float:left;
+	width:auto;
+	
+}
+.modifier label{
+	font-size:15px;
+	margin-left:5px;
+}
+/* Input de type radio*/
+.container {
+    display: inline-block;
+	width:47%;
+    position: relative;
+    margin-bottom: 12px;
+	margin-top: 8px;
+    cursor: pointer;
+	text-align:center;
+	
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 24px;
+    width: 24px; 
+    background-color: #d6e6f3;
+    border-radius:100%;
+}
+.container:hover input ~ .checkmark {
+    background-color: #12111e;
+	opacity:0.5;
+}
+.container input:checked ~ .checkmark {
+    background-color: #243065;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+ 	top: 8px;
+	left: 8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #d6e6f3;
+}
+.modifier input[type=submit],.modifier input[type=reset]{
+	width: 50%;
+    background-color: #243065;
+    color: #d6e6f3;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* Commentaire */
+.commentaire{
+	padding:5px;
+}
+.commentaire:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+.commentaire .post{
+	position:relative;
+	width:49%;
+	display:inline-block;
+}
+.afficherCommentaire{
+	padding:10px;
+	margin-top:10px;
+	margin-left:1.5vw;
+	float:rigth;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	position:relative;
+	width:46.5%;
+	height:72vh;
+	display:inline-block;
+	background-color:#32a0d1;
+	border-radius:8px;
+}
+.afficherCommentaire form{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:-1px;
+	padding-top:5px;
+}
+.afficherCommentaire textarea{
+	font-size:17px;
+	margin:1px 1vw;
+	width:95%;
+	border-radius:8px;
+}
+.afficherCommentaire input{
+	width: 95%;
+	margin:1px 1.3vw;
+    background-color: #243065;
+    color: #d6e6f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	font-size:15px;
+}
+.desCommentaire{
+	overflow-y:auto;
+	height:62.5vh;
+}
+.unCommentaire{
+	background-color: white;
+	margin-bottom:10px;
+	padding:5px;
+	border-radius:8px;
+	text-align:left;
+	width:97%;
+}
+.unCommentaire .date{
+	text-align:rigth;
+	font-size:13px;
+}
+.unCommentaire .titre a{
+	text-decoration:none;
+	font-size:50px;
+}

@@ -1,0 +1,49 @@
+h2{
+	margin:10px;
+}
+.recherche{
+	background-color:#32a0d1;
+	padding:5px 10px;
+	margin:5px;
+	border-radius:8px;
+}
+input[type="text"],textarea{
+	width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+	background-color:#d6e6f3;
+	resize:vertical;
+	font-size:15px;
+}
+input[type=submit]{
+    width: 100%;
+    background-color: #243065;
+    color: #d6e6f3;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.resultat div:nth-child(even),.resultat div:nth-child(even) a{
+	background-color:#243065;
+	color:#d6e6f3;
+}
+.resultat div:nth-child(odd),.resultat div:nth-child(odd) a{
+	background-color:#32a0d1;
+	color:black;
+}
+.resultat div{
+	overflow:hidden;
+	width:96%;
+	display:block;
+	padding:5px 10px;
+	margin:5px;
+	border-radius:8px;
+	font-size:23px;
+}
+.resultat a{
+	font-size:25px;
+}

@@ -1,0 +1,132 @@
+/* Formulaire pour s'inscrire et se connecter */
+.inscription form , .login form{	
+	float: right;
+	width: 300px;
+	border-radius: 10px;
+	padding :20px;
+	background-color:#32a0d1;
+}
+.inscription input, .login input{
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+	background-color:#d6e6f3;
+}
+.inscription input[type=submit], .inscription input[type=reset] ,.login input[type=submit]{
+    width: 50%;
+    background-color: #243065;
+    color: #d6e6f3;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* Input checkbox */
+.login input[type=checkbox]{
+	padding:none;
+	margin:none;
+	border:none;
+	background-color:none;
+	float:left;
+	width:auto;
+}
+.login label{
+	font-size:15px;
+	margin-left:5px;
+}
+/* Input de type radio*/
+.container {
+    display: inline-block;
+	width:47%;
+    position: relative;
+    margin-bottom: 12px;
+	margin-top: 8px;
+    cursor: pointer;
+	text-align:center;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 24px;
+    width: 24px; 
+    background-color: #d6e6f3;
+    border-radius:100%;
+}
+.container:hover input ~ .checkmark {
+    background-color: #12111e;
+	opacity:0.5;
+}
+.container input:checked ~ .checkmark {
+    background-color: #243065;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+ 	top: 8px;
+	left: 8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #d6e6f3;
+}
+/* Image */
+.login img{
+    border-radius: 50%;
+	margin:0px;
+	padding-bottom:6px;
+}
+/* Comment réagit la mise en page du formulaire lorsque la page devient trop petit */
+@media screen and (max-width: 575px) {
+    .inscription form , .login form{
+		float:none;
+		width:92%;
+		height:100%;
+	}
+	.login img{
+		width:0;
+	}
+	.description{ 
+		height: 205px;
+	}
+}
+@media screen and (min-width: 576px){ 
+	.inscription .description{
+		height: 710px;	
+		padding-right:10px;
+	}
+	.login .description{
+		height: 550px;	
+		padding-right:10px;
+	}
+}
+/* Message à côté des deux formulaires */
+.description{
+	overflow:hidden;
+	/*border: 3px solid green;*/	
+}
+.description p{
+	overflow:hidden;
+	margin: 0;
+    position: relative;
+    top: 50%;
+    /*-ms-transform: translate(-50%, -50%);*/
+	transform: translate(0%, -50%);
+}
+.inscription , .login {
+	margin: 10px;
+	overflow:hidden;
+}
